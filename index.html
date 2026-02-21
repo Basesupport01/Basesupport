@@ -1,1 +1,239 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Base Support | Crypto Management</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+}
+
+/* Header */
+header {
+    background: rgba(0,0,0,0.3);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+    background: #007BFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Sections */
+.section {
+    padding: 70px 50px;
+    background: rgba(255,255,255,0.05);
+    margin: 40px;
+    border-radius: 10px;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.blog-post {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background: rgba(0,0,0,0.4);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Chat Button */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007BFF;
+    color: white;
+    padding: 15px 22px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Chat Box */
+.chat-box {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 320px;
+    background: #ffffff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.chat-header {
+    background: #007BFF;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+}
+
+.chat-messages {
+    padding: 10px;
+    height: 220px;
+    overflow-y: auto;
+}
+
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+}
+
+.chat-input button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <div class="logo-icon">BS</div>
+        <div class="logo-text">Base Support</div>
+    </div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#blog">Blog</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Corporate Crypto Management & Support</h2>
+    <p>Professional blockchain advisory, digital asset management, and structured crypto solutions.</p>
+</section>
+
+<section class="section" id="about">
+    <h2>About Us</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+        Base Support is a corporate-level crypto advisory and management platform 
+        providing structured digital asset support, blockchain insights, and 
+        professional portfolio guidance with transparency and integrity.
+    </p>
+</section>
+
+<section class="section" id="blog">
+    <h2>Latest Blog Insights</h2>
+
+    <div class="blog-post">
+        <h3>Managing Crypto Risk Professionally</h3>
+        <p>Strategic risk control methods used by professional asset managers.</p>
+    </div>
+
+    <div class="blog-post">
+        <h3>Blockchain Transparency in 2026</h3>
+        <p>How institutions are improving trust and digital financial operations.</p>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Base Support | Corporate Crypto Management
+</footer>
+
+<div class="chat-button" onclick="toggleChat()">💬 Chat Support</div>
+
+<div class="chat-box" id="chatBox">
+    <div class="chat-header">Base Support - Live Support</div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script>
+function toggleChat() {
+    var chatBox = document.getElementById("chatBox");
+    chatBox.style.display = chatBox.style.display === "block" ? "none" : "block";
+}
+
+function sendMessage() {
+    var input = document.getElementById("chatInput");
+    var message = input.value;
+    if(message.trim() !== "") {
+        var chatMessages = document.getElementById("chatMessages");
+        chatMessages.innerHTML += "<p><strong>You:</strong> " + message + "</p>";
+        input.value = "";
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+}
+</script>
+
+</body>
+</html>
