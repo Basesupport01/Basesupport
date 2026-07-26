@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Everstone Demo Bank</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<h2>Everstone Demo Bank</h2>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#services">Services</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#faq">FAQ</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<button id="themeBtn">🌙</button>
+
+</nav>
+
+</header>
+
+<section id="home" class="hero">
+
+<h1>Banking Experience Demo</h1>
+
+<p>This is a fictional banking website created for demonstration and learning purposes.</p>
+
+<a href="#contact" class="btn">Contact Us</a>
+
+</section>
+
+<section id="services">
+
+<h2>Demo Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Checking</h3>
+<p>Illustrative checking account information.</p>
+</div>
+
+<div class="card">
+<h3>Savings</h3>
+<p>Example savings products for demonstration.</p>
+</div>
+
+<div class="card">
+<h3>Business Banking</h3>
+<p>Sample business banking information.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2>About</h2>
+
+<p>
+
+Everstone Demo Bank is a fictional project built to demonstrate modern banking website design.
+
+</p>
+
+</section>
+
+<section id="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+
+<h3>Is this a real bank?</h3>
+
+<p>No. This website is a demonstration project only.</p>
+
+</div>
+
+<div class="faq">
+
+<h3>Can I open an account?</h3>
+
+<p>No. This site has no real banking functionality.</p>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<form>
+
+<input type="text" placeholder="Full Name">
+
+<input type="email" placeholder="Email">
+
+<textarea placeholder="Message"></textarea>
+
+<button type="submit">Send</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 Everstone Demo Bank — Demo Project</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
